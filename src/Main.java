@@ -20,19 +20,15 @@ public class Main {
 
 
     public static int[] mergeSort(int[] vector) {
+
         if (vector.length <= 1) {
             return vector;
         }
-        int[] vector1 = Arrays.copyOfRange(vector, 0, vector.length/2);
 
-        System.out.print("Vetor1: ");
-                for(int numero:vector1){
-            System.out.print(numero + " ");
-        }
-        System.out.println(" ");
+         // Divide o vetor ao meio
+        int[] left = Arrays.copyOfRange(vector, 0, vector.length/2);
+        int[] right = Arrays.copyOfRange(vector, vector.length/2, vector.length);
 
-
-        int[] vector2 = Arrays.copyOfRange(vector, vector.length/2, vector.length);
 
         System.out.print("Vetor2: ");
         for(int numero:vector2){
@@ -55,7 +51,7 @@ public class Main {
                 i++;
             }
             else{
-                vetorMerge[k] = vetor2[j];
+                vetorMerge[k] = right[j];
                 j++;
             }
             k++;
@@ -72,6 +68,7 @@ public class Main {
             j++;
             k++;
         }
+
 
         return vetorMerge;
     }
