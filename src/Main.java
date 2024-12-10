@@ -20,7 +20,6 @@ public class Main {
 
 
     public static int[] mergeSort(int[] vector) {
-        int[] mergedVector= new int[vector.length];
         if (vector.length <= 1) {
             return vector;
         }
