@@ -20,8 +20,7 @@ public class Main {
 
 
     public static int[] mergeSort(int[] vector) {
-        int[] mergedVector= new int[vector.length];
-        if (vector.length <= 1) {
+         if (vector.length <= 1) {
             return vector;
         }
         int[] vector1 = Arrays.copyOfRange(vector, 0, vector.length/2);
