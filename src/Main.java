@@ -18,6 +18,7 @@ public class Main {
         System.out.println(" ");
     }
 
+    git add
 
     public static int[] mergeSort(int[] vector) {
 
@@ -30,15 +31,7 @@ public class Main {
         int[] right = Arrays.copyOfRange(vector, vector.length/2, vector.length);
 
 
-        System.out.print("Vetor2: ");
-        for(int numero:vector2){
-            System.out.print(numero + " ");
-        }
-
-        System.out.println(" ");
-
-
-       return merge(mergeSort(vector1),mergeSort(vector2));
+       return merge(mergeSort(left),mergeSort(right));
     }
 
     public static int[] merge(int[] vetor1, int[] vetor2){
@@ -51,7 +44,7 @@ public class Main {
                 i++;
             }
             else{
-                vetorMerge[k] = right[j];
+                vetorMerge[k] = vetor2[j];
                 j++;
             }
             k++;
@@ -68,7 +61,6 @@ public class Main {
             j++;
             k++;
         }
-
 
         return vetorMerge;
     }
