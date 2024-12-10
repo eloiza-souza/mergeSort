@@ -5,20 +5,20 @@ public class Main {
         int[] numerosAleatorios = {5, 8, 4, 1, 6, 9, 7, 4, 2, 3};
 
         System.out.print("Números aleatórios: ");
-        for(int numero:numerosAleatorios){
-            System.out.print(numero + " ");
-        }
-        System.out.println(" ");
+        printArray(numerosAleatorios;
 
         int[] numerosOrdenados = mergeSort(numerosAleatorios);
         System.out.print("Números ordenados: ");
-        for(int numero:numerosOrdenados){
-            System.out.print(numero + " ");
+        printArray(numerosOrdenados);
+
+    }
+
+    public static void printArray(int[] array){
+        for(int number:array){
+            System.out.print(number + " ");
         }
         System.out.println(" ");
     }
-
-    git add
 
     public static int[] mergeSort(int[] vector) {
 
