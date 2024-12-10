@@ -1,4 +1,4 @@
-# 🛠️ Merge Sort - Documenração
+# 🛠️ Merge Sort - Documentação
 
 ![gif explicativo de um algoritmo Merge sort ](https://www.crio.do/blog/content/images/2021/12/Merge-Sort.gif)
 
