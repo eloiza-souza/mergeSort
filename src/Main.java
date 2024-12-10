@@ -7,27 +7,13 @@ public class Main {
         int[] randomNumbers = {5, 8, 4, 1, 6, 9, 7, 4, 2, 3};
 
         // Print the original array
-        System.out.print("Random numbers: ");
-        printArray(randomNumbers);
+        System.out.println("Random numbers: " + Arrays.toString(randomNumbers));
 
         // Sort the array using Merge Sort
         int[] orderedNumbers = mergeSort(randomNumbers);
 
         // Print the sorted array
-        System.out.print("Sorted numbers: ");
-        printArray(orderedNumbers);
-    }
-
-    /**
-     * Prints the elements of an integer array to the console.
-     *
-     * @param array The array to be printed.
-     */
-    public static void printArray(int[] array) {
-        for (int number : array) {
-            System.out.print(number + " ");
-        }
-        System.out.println();
+        System.out.println("Sorted numbers: " + Arrays.toString(orderedNumbers));
     }
 
     /**
