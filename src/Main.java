@@ -43,23 +43,36 @@ public class Main {
 
 
        return merge(mergeSort(vector1),mergeSort(vector2));
-
     }
 
     public static int[] merge(int[] vetor1, int[] vetor2){
-        int[] vetorMerge = new int[vetor1.length+vetor2.length];
+        int[] vetorMerge = new int[vetor1.length + vetor2.length];
         int i = 0,j = 0, k = 0;
+
         while ( i < vetor1.length && j < vetor2.length){
-            if(vetor1[i] >= vetor2[j]){
+            if(vetor1[i] <= vetor2[j]){
+                vetorMerge[k] = vetor1[i];
                 i++;
-                k++;
             }
             else{
                 vetorMerge[k] = vetor2[j];
                 j++;
-                k++;
             }
+            k++;
         }
+
+        while (i < vetor1.length) {
+            vetorMerge[k] = vetor1[i];
+            i++;
+            k++;
+        }
+
+        while (j < vetor2.length) {
+            vetorMerge[k] = vetor2[j];
+            j++;
+            k++;
+        }
+
         return vetorMerge;
     }
 
