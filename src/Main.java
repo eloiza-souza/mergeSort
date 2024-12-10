@@ -20,7 +20,8 @@ public class Main {
 
 
     public static int[] mergeSort(int[] vector) {
-         if (vector.length <= 1) {
+
+        if (vector.length <= 1) {
             return vector;
         }
 
@@ -28,18 +29,25 @@ public class Main {
         int[] left = Arrays.copyOfRange(vector, 0, vector.length/2);
         int[] right = Arrays.copyOfRange(vector, vector.length/2, vector.length);
 
-       return merge(mergeSort(left),mergeSort(right));
 
+        System.out.print("Vetor2: ");
+        for(int numero:vector2){
+            System.out.print(numero + " ");
+        }
+
+        System.out.println(" ");
+
+
+       return merge(mergeSort(vector1),mergeSort(vector2));
     }
 
-    public static int[] merge(int[] left, int[] right){
-        int[] vetorMerge = new int[left.length+right.length];
+    public static int[] merge(int[] vetor1, int[] vetor2){
+        int[] vetorMerge = new int[vetor1.length + vetor2.length];
         int i = 0,j = 0, k = 0;
 
-        //Compara os elementos dos vetores e adiciona ao vetor mesclado
-        while ( i < left.length && j < right.length){
-            if(left[i] <= right[j]){
-                vetorMerge[k] = left[i];
+        while ( i < vetor1.length && j < vetor2.length){
+            if(vetor1[i] <= vetor2[j]){
+                vetorMerge[k] = vetor1[i];
                 i++;
             }
             else{
@@ -49,19 +57,18 @@ public class Main {
             k++;
         }
 
-        //Adiciona o restante dos elementos do vetor da esquerda
-        while (i < left.length){
-            vetorMerge[k] = left[i];
+        while (i < vetor1.length) {
+            vetorMerge[k] = vetor1[i];
             i++;
             k++;
         }
 
-        //Adiciona o restante dos elemnentos do vetor da direita
-        while (j < right.length){
-            vetorMerge[k] = right[j];
+        while (j < vetor2.length) {
+            vetorMerge[k] = vetor2[j];
             j++;
             k++;
         }
+
 
         return vetorMerge;
     }
