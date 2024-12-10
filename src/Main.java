@@ -34,30 +34,31 @@ public class Main {
        return merge(mergeSort(left),mergeSort(right));
     }
 
-    public static int[] merge(int[] vetor1, int[] vetor2){
-        int[] vetorMerge = new int[vetor1.length + vetor2.length];
+
+    public static int[] merge(int[] left, int[] right){
+        int[] vetorMerge = new int[left.length + right.length];
         int i = 0,j = 0, k = 0;
 
-        while ( i < vetor1.length && j < vetor2.length){
-            if(vetor1[i] <= vetor2[j]){
-                vetorMerge[k] = vetor1[i];
+        while ( i < left.length && j < right.length){
+            if(left[i] <= right[j]){
+                vetorMerge[k] = left[i];
                 i++;
             }
             else{
-                vetorMerge[k] = vetor2[j];
+                vetorMerge[k] = right[j];
                 j++;
             }
             k++;
         }
 
-        while (i < vetor1.length) {
-            vetorMerge[k] = vetor1[i];
+        while (i < left.length) {
+            vetorMerge[k] = left[i];
             i++;
             k++;
         }
 
-        while (j < vetor2.length) {
-            vetorMerge[k] = vetor2[j];
+        while (j < right.length) {
+            vetorMerge[k] = right[j];
             j++;
             k++;
         }
